@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    gap: 10px;
+}
+.imgContainer{
+    /* flex: 1; */
+position: relative;
+height: 100px;
+width: 100px;
+}
+.img{
+object-fit: cover;
+}
