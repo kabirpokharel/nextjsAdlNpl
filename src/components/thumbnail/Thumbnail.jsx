@@ -9,8 +9,8 @@ const Thumbnail = ({ imgArrary, selectImg, imgId }) => {
       {imgArrary.map((img, id) => (
         <button
           onClick={() => selectImg(id)}
-          key="id"
-          className={styles.imgContainer}
+          key={id}
+          className={imgId === id ? styles.imgContainerSelected : styles.imgContainer}
         >
           <Image src={img} alt="" fill className={styles.img} />
         </button>

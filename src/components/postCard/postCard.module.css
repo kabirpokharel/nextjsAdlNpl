@@ -9,7 +9,7 @@
   display: flex;
 }
 
-.imgContainer{
+/* .imgContainer{
   width: 90%;
   height: 400px;
   position: relative;
@@ -17,6 +17,18 @@
 
 .img{
   object-fit: cover;
+} */
+.imgContainer {
+  width: 90%;
+  height: 400px;
+  position: relative;
+  overflow: hidden; /* Prevents overflow of the image */
+}
+
+.img {
+  object-fit: contain; /* Use contain to preserve aspect ratio */
+  width: auto; /* Let width adjust automatically */
+  height: 100%; /* Full height of the container */
 }
 
 .date{

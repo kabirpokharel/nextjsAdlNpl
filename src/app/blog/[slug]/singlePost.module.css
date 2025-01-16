@@ -1,18 +1,22 @@
 .container {
-    /* display: flex;
-    gap: 100px; */
   }
   
   .imgContainer {
     flex: 1;
     position: relative;
-    height: calc(100vh - 300px);
+    height: calc(100vh - 350px);
   }
   
   .img{
-    object-fit: cover;
+    object-fit: contain;
   }
-  
+  .currentImage{
+    object-fit: contain;
+  }
+  .thumbnailContainer{
+    padding:2rem;
+  }
+
   .textContainer {
     flex: 2;
     display: flex;

@@ -20,7 +20,9 @@ const SinglePostPage = ({ post }) => {
           <Image src={post.img[imgId]} alt="" fill className={styles.img} />
         </div>
       )}
+      <div className={styles.thumbnailContainer}>
       <Thumbnail selectImg={selectImg} imgId={imgId} imgArrary={post.img} />
+      </div>
       <div className={styles.textContainer}>
         <h1 className={styles.title}>{post.title}</h1>
         <div className={styles.detail}>

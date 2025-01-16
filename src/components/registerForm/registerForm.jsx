@@ -10,11 +10,11 @@ import Link from "next/link";
 const RegisterForm = () => {
   const [state, formAction] = useFormState(register, undefined);
 
-  const router = useRouter();
+  // const router = useRouter();
 
-  useEffect(() => {
-    state?.success && router.push("/login");
-  }, [state?.success, router]);
+  // useEffect(() => {
+  //   state?.success && router.push("/login");
+  // }, [state?.success, router]);
 
   return (
     <form className={styles.form} action={formAction}>
@@ -26,8 +26,10 @@ const RegisterForm = () => {
         placeholder="password again"
         name="passwordRepeat"
       />
-      <button>Register</button>
-      {state?.error}
+      <button type="submit">Register</button>
+      {state?.error &&
+        <p>{state.error}</p>
+      }
       <Link href="/login">
         Have an account? <b>Login</b>
       </Link>
