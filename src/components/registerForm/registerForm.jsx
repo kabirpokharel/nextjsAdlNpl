@@ -10,6 +10,12 @@ import Link from "next/link";
 const RegisterForm = () => {
   const [state, formAction] = useFormState(register, undefined);
 
+
+  const router = useRouter();
+  useEffect(() => {
+    state?.success && router.push("/login")
+  }, [state?.success, router]);
+  
   // const router = useRouter();
 
   // useEffect(() => {

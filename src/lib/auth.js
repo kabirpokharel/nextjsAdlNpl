@@ -51,11 +51,11 @@ export const { auth, handlers:{GET,POST}, signIn, signOut } = NextAuth({
   callbacks: {
     async signIn({ user, account, profile }) {
       console.log("Here is the value of user, acc and profile", user, account, profile);
-      if (account.provider === "github") {
+      if (account.provider === "github") { //this is for github only credential login is handled by login funciton above
         connectToDb();
         try {
           const user = await User.findOne({ email: profile.email });
-          console.log("see this is profile ==  > ", user, account, profile);
+          console.log("see this is profile ==> ", user, account, profile);
           if (!user) {
             const newUser = new User({
               userName: profile.name,
